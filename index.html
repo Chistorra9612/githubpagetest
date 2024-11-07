@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-section">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button id="login-btn">Iniciar</button>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <div id="app-section" style="display: none;">
+        <h2>Bienvenido, <span id="user-name"></span></h2>
+        
+        <h3>Filtrar Tareas</h3>
+        <select id="status-filter">
+            <option value="Todos">Todos</option>
+            <option value="Por hacer">Por hacer</option>
+            <option value="En progreso">En progreso</option>
+            <option value="Rechazado">Rechazado</option>
+            <option value="Cancelado">Cancelado</option>
+            <option value="Cerrado">Cerrado</option>
+            <option value="En pruebas de calidad">En pruebas de calidad</option>
+            <option value="En validación por el usuario">En validación por el usuario</option>
+            <option value="En proceso de liberación">En proceso de liberación</option>
+        </select>
+
+        <h3>Registrar Tarea</h3>
+        <input type="text" id="task-id" placeholder="Código de tarea">
+        <input type="text" id="task-title" placeholder="Título de tarea">
+        <textarea id="task-description" placeholder="Descripción"></textarea>
+        <input type="date" id="start-date">
+        <input type="text" id="client-name" placeholder="Nombre del cliente">
+        <input type="text" id="project-id" placeholder="ID del proyecto">
+        <textarea id="comments" placeholder="Comentarios"></textarea>
+        <select id="status">
+            <option value="Por hacer">Por hacer</option>
+            <option value="En progreso">En progreso</option>
+            <option value="Rechazado">Rechazado</option>
+            <option value="Cancelado">Cancelado</option>
+            <option value="Cerrado">Cerrado</option>
+            <option value="En pruebas de calidad">En pruebas de calidad</option>
+            <option value="En validación por el usuario">En validación por el usuario</option>
+            <option value="En proceso de liberación">En proceso de liberación</option>
+        </select>
+        <button id="add-task-btn">Agregar Tarea</button>
+
+        <h3>Lista de Tareas</h3>
+        <table id="tasks-table">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Cliente</th>
+                    <th>ID Proyecto</th>
+                    <th>Comentarios</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h3>Actualizar Tarea</h3>
+        <input type="text" id="update-task-id" disabled>
+        <input type="text" id="update-task-title">
+        <textarea id="update-task-description"></textarea>
+        <input type="date" id="update-start-date">
+        <input type="text" id="update-client-name">
+        <input type="text" id="update-project-id">
+        <textarea id="update-comments"></textarea>
+        <select id="update-status">
+            <option value="Por hacer">Por hacer</option>
+            <option value="En progreso">En progreso</option>
+            <option value="Rechazado">Rechazado</option>
+            <option value="Cancelado">Cancelado</option>
+            <option value="Cerrado">Cerrado</option>
+            <option value="En pruebas de calidad">En pruebas de calidad</option>
+            <option value="En validación por el usuario">En validación por el usuario</option>
+            <option value="En proceso de liberación">En proceso de liberación</option>
+        </select>
+        <button id="update-task-btn">Actualizar Tarea</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
